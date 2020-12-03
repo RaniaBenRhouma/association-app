@@ -1,0 +1,310 @@
+/* nav bar component  */
+.navig{
+  background-color: rgb(114, 113, 113);
+  color: white;
+  display: flex;
+  justify-items: center;
+  height: 80px;
+}
+
+.navig ul {
+  display: flex;
+  
+}
+.links{
+  margin-left: 40%;
+  margin-top: 30px;
+  
+}
+.navig ul li {
+ text-decoration: none;
+ margin-left: 90px;
+ white-space: nowrap;
+}
+.navig ul li:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.navig img {
+  margin-top: 10px;
+  margin-left: 5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.description, .members , .partnaires, .footDiv {
+   text-align: center;
+  }
+
+  .members , .partnaires{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+ 
+  .footDiv{
+  background-color:  rgb(114, 113, 113);
+  color: white;
+  }
+
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .bureau {
+    width: 200px;
+    height: 200px;
+  }
+  .partnaire {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .members{
+    background-color: rgb(247, 197, 104);
+  }
+  .links{
+    list-style: none;
+  }
+
+  .barcontact{
+    display:"flex";
+    justify-content:"space-around";
+    margin-left:70px;
+  }
+
+  .fa-chevron-circle-up{
+     font-size: 50px;
+     margin-top: 30px;
+     color: rgb(255, 255, 255);
+  }
+  
+  .fa-facebook-f, .fa-at, .fa-map-marker-alt {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 60px;
+    color: rgb(255, 255, 255);
+
+  }
+  .fa-facebook-f:hover, .fa-at:hover, .fa-map-marker-alt:hover,.fa-chevron-circle-up:hover{
+    color:orange;
+  }
+
+  /*********** chat **********/
+  .cercleChat{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:20px;
+    color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:rgb(209, 137, 3);
+  }
+
+  .chatBox{
+    height: 600px;
+    width:300px;
+    border:2px rgb(141, 95, 9) solid;
+  }
+  .blankBox{
+    height: 580px;
+  }
+  .inputChat{
+    display: flex;
+  }
+  .fa-paper-plane{
+    color: rgb(209, 137, 3);
+
+  }
+
+  /*********************** DachboardUser ***************************/
+
+  .dachbrd {
+    background-color: rgb(177, 175, 175);
+    display: flex;
+  }
+
+  .profilDivFixe{
+    background-color: rgb(248, 199, 108);
+    text-align: center;
+    margin-right: 10px;
+    position:fixed;
+    width: 25%;
+    height: 560px;
+    display:block;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 3mm;
+    -webkit-border-radius: 3mm;
+    -moz-border-radius: 3mm;
+    -ms-border-radius: 3mm;
+    -o-border-radius: 3mm;
+}
+
+.profilDiv1, .profilDiv2 ,.profilDiv3 {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+.profilDiv1{
+  margin-top: 50px;
+  background-color: rgb(42, 236, 42);
+}
+.profilDiv2{
+  background-color: rgb(27, 235, 224);
+}
+.profilDiv3{
+  background-color: rgb(240, 91, 37);
+  margin-bottom: 50px;
+}
+.profilDiv1:hover, .profilDiv2:hover ,.profilDiv3:hover {
+opacity: 0.7;
+}
+
+.divVar{
+  width: 70%;
+  margin-right: 10px;
+  margin-left: 26%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  background-color: white;
+  border-radius: 3mm;
+  -webkit-border-radius: 3mm;
+  -moz-border-radius: 3mm;
+  -ms-border-radius: 3mm;
+  -o-border-radius: 3mm;
+}
+.fa-sign-out-alt{
+  margin-left: 90%;
+  color: black;
+  font-size:30px;
+  margin-top:20px;
+}
+
+.EventsBox{
+  width:80%;
+  height: 700px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+
+}
+
+.EventHeader{
+  width:100%;
+  height: 50px;
+  background-color: orange;
+  color:white;
+  text-align: center;
+
+}
+
+.EventArchiveBox{
+  width:80%;
+  padding-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+
+}
+
+.EventArchiveHeader{
+  width:100%;
+  height: 50px;
+  background-color: orange;
+  color:white;
+  text-align: center;
+
+}
+
+.fa-chevron-up{
+  margin-left: 70px;
+  font-size: 20px;
+}
+.EventChoosenBox{
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+
+}
+.ChoosenEventHeader{
+  width:100%;
+  height: 50px;
+  background-color: orange;
+  color:white;
+  text-align: center;
+
+}
+
+.eventsDiv{
+  margin-top: 1.5%;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: scroll;
+  height: 600px;
+ }
+
+.eventDiv{
+  width:400px;
+  text-align: center;
+  border: 1px rgb(0, 0, 0) solid;
+  box-shadow: black 3px;
+  
+  margin-top: 30px;
+  border-radius: 3mm;
+  -webkit-border-radius: 3mm;
+  -moz-border-radius: 3mm;
+  -ms-border-radius: 3mm;
+  -o-border-radius: 3mm;
+
+}
+
+.BtnParticipate{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background-color: grey;
+  color:black;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin-left: 95px;
+  
+}
+.BtnAlParticipated{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  color:white;
+  background-color: green;
+  white-space: nowrap;
+  margin-left: 95px;
+
+}
+.eventImg{
+  width: 400px;
+  height:200px;
+  border-radius: 3mm;
+  -webkit-border-radius: 3mm;
+  -moz-border-radius: 3mm;
+  -ms-border-radius: 3mm;
+  -o-border-radius: 3mm;
+
+}
+.imgProfile{
+  width:250px;
+  height:250px;
+}
