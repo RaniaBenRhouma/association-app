@@ -13,7 +13,8 @@ const SignUp = () => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [phoneNumber, setPhoneNumber] = useState();
-    const addUser = () => {
+    const addUser = (e) => {
+      e.preventDefault();
         dispatch( 
           signUp({
             name,
@@ -30,19 +31,19 @@ const SignUp = () => {
       ) : user ? (
         <Redirect to='/logIn' />
       ) : (
-      <>
+      <div className="signPage">
         <h1>Sign Up</h1>
-        <input type="text" name='name' onChange={(e) => setName(e.target.value)} placeholder="Your Name ..."/>
-        <input type="email" name='email' onChange={(e) => setEmail(e.target.value)} placeholder="Your Email ..."/>
-        <input type="password" name='password' onChange={(e) => setPassword(e.target.value)} placeholder="**********" />
-        <input type="tel" name='phoneNumber' onChange={(e) => setPhoneNumber(e.target.value)} placeholder=" Your Number Phone" />
+        <div><input type="text" name='name' onChange={(e) => setName(e.target.value)} placeholder="Your Name ..."/></div>
+        <div><input type="email" name='email' onChange={(e) => setEmail(e.target.value)} placeholder="Your Email ..."/></div>
+        <div><input type="password" name='password' onChange={(e) => setPassword(e.target.value)} placeholder="**********" /></div>
+        <div><input type="tel" name='phoneNumber' onChange={(e) => setPhoneNumber(e.target.value)} placeholder=" Your Number Phone" /></div>
 
-           <div onClick={addUser}> Sign Up </div>
+          <div> <button onClick={(e)=>addUser(e)}> Sign Up </button></div>
 
-           <Link to="/logIn">Already have an account ?</Link>
-               </>
+           <Link to="/logIn"><p>Already have an account ?</p></Link>
+               </div>
       )}
-    </div> );
+    </div> )
 }
  
 export default SignUp;

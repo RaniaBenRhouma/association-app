@@ -9,7 +9,9 @@ import SignUp from './components/signLogIn/signup'
 import LogIn from './components/signLogIn/logIn'
 import EventPage from "./components/events/eventPage";
 import Forum from "./components/forum/forum";
-
+import PrivateRoute from "./components/routeTypes/privateRoute";
+import PrivateAdminRoute from './components/routeTypes/privateAdminRoute';
+import PublicRoute from "./components/routeTypes/publicRoute";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import Parameter from "./components/compte/parameterProfil";
 
@@ -24,11 +26,19 @@ function App() {
       <Route exact path="/" component={MainPage}/>
       <Route exact path="/signUp" component={SignUp}/>
       <Route exact path="/logIn" component={LogIn}/>
-      <Route exact path="/profile/:id" component={Dashboard}/>
-      <Route exact path="/admin" component={DashboardAdmin}/>
-      <Route path="/forum" component={Forum}/>
-      <Route path="/events" component={EventPage}/>
-      <Route path="/parameter" component={Parameter}/>
+
+      <PrivateRoute component={Dashboard} exact path="/profile/:id" />
+
+      {/* <Route exact path="/profile/:id" component={Dashboard}/> */}
+      <PrivateAdminRoute component={DashboardAdmin} exact path="/admin" />
+
+      {/* <Route exact path="/admin" component={DashboardAdmin}/> */}
+      <PublicRoute component={Forum} restricted={true}  path="/forum" />
+      <PublicRoute component={EventPage} restricted={true} path="/events" />
+
+      {/* <Route path="/forum" component={Forum}/> */}
+      {/* <Route path="/events" component={EventPage}/> */}
+      {/* <Route path="/parameter" component={Parameter}/> */}
       
       </Switch>
 

@@ -8,6 +8,7 @@ Router.post(
     `/admin/addEvent`, async (req, res) => {
 
         const { title, img, desc, date  } = req.body;
+        console.log({ title, img, desc, date  });
         try {
             const searchResult = await Event.findOne({ title });
 
@@ -16,7 +17,8 @@ Router.post(
                 title,
                  img, 
                  desc,
-                 date,        });
+                 date,    
+                    });
             newEvent.save();
             res.json(newEvent);
           } catch (error) {
@@ -36,7 +38,9 @@ Router.post(
             console.error(error);
             res.json(error);
           }
-        } );
+        }
+        
+        );
 
 
       module.exports = Router;

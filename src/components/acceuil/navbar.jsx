@@ -12,16 +12,16 @@ const NavBar = () => {
     return ( 
         <div className="navig">
             <a id="top"></a>
-            <Link to="/"><img src={MyImg} alt="logo" /></Link>
+            <Link style={{textDecoration:"none" }} to="/"><img src={MyImg} alt="logo" /></Link>
            <div>
             <ul className="links">
-                <Link to="/"><li>Acceuil</li></Link>
+                <Link style={{textDecoration:"none" , color:"white"}} to="/"><li>Acceuil</li></Link>
                 <li>Projects</li>
                 <li>Activities</li>
                 <li>News</li>
-                {isConnected ? 
-                ((loggedUser.role =='user')? (<li><Link to="/profile/:id">Profile</Link></li>) : (<li><Link to="/admin">Admin Profile</Link></li>)):
-                (<li><Link to="/signUp">Sign Up</Link></li>)}
+                <li>{isConnected ? 
+                ((loggedUser.role =='user')? (<Link to="/profile/:id">Profile</Link>) : (<Link to="/admin">Admin Profile</Link>)):
+                (<Link style={{textDecoration:"none", color:"white"}} to="/signUp">Sign Up</Link>)}</li>
 
 
             </ul>

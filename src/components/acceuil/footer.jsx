@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Footer = () => {
+    let copyR= "Copyright © 2020 Association Co3 - By Rania Ben Rhouma and GO MY C{>}DE encadrement";
     return ( 
         <div className="footDiv">
 
@@ -18,6 +19,8 @@ const Footer = () => {
            
 
             <a href="#top"><i class="fas fa-chevron-circle-up"></i></a>
+    <div className="copyrirht">{copyR}</div>
+
         </div>
      );
 }

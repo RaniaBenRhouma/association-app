@@ -16,7 +16,8 @@ const LogIn = () => {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const logUser = () => {
+    const logUser = (e) => {
+      e.preventDefault();
         dispatch( 
           logIn({
             
@@ -33,13 +34,13 @@ const LogIn = () => {
         (loggedUser.role =='user')? (<Redirect to='/profile/:id' />) : (<Redirect to='/admin' />)
       ) : loading ? (
         <img  src="https://3wga6448744j404mpt11pbx4-wpengine.netdna-ssl.com/wp-content/uploads/2015/05/InternetSlowdown_Day.gif" alt="Loading ..." />
-      ) : ( <div>
+      ) : ( <div className="loginPage">
                 <h1>Log In</h1>
 
-        <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email ..."/>
-        <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="**********" />
+        <div><input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email ..."/></div>
+        <div><input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="**********" /></div>
 
-       <div onClick={logUser}> Log In </div>
+        <div><button  onClick={(e)=>logUser(e)} > Log In </button></div>
 
              
     </div> );
